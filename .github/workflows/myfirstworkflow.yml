@@ -4,12 +4,13 @@ name: My first workflow
 on:     
   push:
     branches: 
-        - main
+      - main
   workflow_dispatch:
-  jobs:
-    first_job:
-      name: My First Job
-      runs-on: ubuntu-latest
-      steps:
-      -run: echo "Hello world from ${{ github.actor }}."
-    
+
+jobs:
+  first_job:
+    name: My First Job
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello world from ${{ github.actor }}."
+
